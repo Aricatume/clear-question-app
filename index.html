@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0e13" />
+  <meta name="color-scheme" content="dark" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://telegram.org https://mc.yandex.ru https://mc.yandex.com https://yastatic.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://mc.yandex.ru https://mc.yandex.com; media-src 'self' data: blob:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com wss://mc.yandex.ru; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <meta name="referrer" content="origin" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Геометрия мышления · Ясная логика и Стратегии</title>
+  <link rel="manifest" href="./manifest.webmanifest?v=410" />
+  <link rel="icon" type="image/svg+xml" href="./icon.svg?v=410" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="./style.css?v=410" />
+</head>
+<body>
+  <main class="shell">
+    <!-- Precision Blueprint Top Bar -->
+    <header class="topbar">
+      <button id="brand-home" class="brand-btn" type="button" title="На главную">
+        <span class="brand-mark" aria-hidden="true">❖</span>
+        <span class="brand-text">Геометрия мышления</span>
+      </button>
+      <div class="topbar-right">
+        <button id="btn-open-onboarding" class="onboarding-pill" type="button" title="Вводный практикум: База за 2 минуты">
+          <span>🎓 База</span>
+          <span id="onboarding-badge" class="onb-count">0/4</span>
+        </button>
+        <button id="btn-top-sound" class="icon-pill" type="button" title="Звуковой отклик" aria-label="Переключить звук">🔊</button>
+        <button id="btn-open-rhythm" class="rhythm-pill" type="button">
+          <span class="live-dot"></span>
+          <span id="rhythm-pill-label">Ритм</span>
+          <span id="rhythm-badge" class="pill-badge hidden">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 4 Crisp Navigation Tabs -->
+    <nav id="main-tabs" class="tabs" aria-label="Разделы">
+      <button class="tab active" data-tab="course" type="button">Сейчас</button>
+      <button class="tab" data-tab="express" type="button">Экспресс</button>
+      <button class="tab" data-tab="lab" type="button">Приборы</button>
+      <button class="tab" data-tab="strategies" type="button">Стратегии</button>
+    </nav>
+
+    <!-- ==================== TAB 1: 1-SCREEN SMART ENTRY + PROGRESSIVE 26-WEEK MAP ==================== -->
+    <section id="view-course" class="view">
+      <div id="due-review-banner" class="due-banner hidden"></div>
+
+      <!-- Guided 4-Step Hands-On Onboarding Card ([БАЗА]) -->
+      <div id="onboarding-entry-card" class="onboarding-banner-card"></div>
+
+      <!-- 1-Screen Blueprint Hero Card -->
+      <div id="today-hero-card" class="card blueprint-hero">
+        <div class="hero-head-row">
+          <span class="eyebrow" style="margin:0;">Твой ход на ясность</span>
+          <span id="today-stage-chip" class="stage-chip">Ступень 1 / 4</span>
+        </div>
+
+        <div class="intent-pills" role="group" aria-label="Формат шага сейчас">
+          <button type="button" class="intent-pill active" data-intent="warmup">
+            <span class="ip-ico">⚡</span>
+            <span class="ip-lbl">Разминка</span>
+            <span class="ip-sub" id="ip-warmup-sub">1 мин · 3 задачи</span>
+          </button>
+          <button type="button" class="intent-pill" data-intent="course">
+            <span class="ip-ico">📖</span>
+            <span class="ip-lbl">Шаг курса</span>
+            <span class="ip-sub" id="ip-course-sub">Неделя 1</span>
+          </button>
+          <button type="button" class="intent-pill" data-intent="lab">
+            <span class="ip-ico">🧪</span>
+            <span class="ip-lbl">Прибор</span>
+            <span class="ip-sub" id="ip-lab-sub">Эйлер</span>
+          </button>
+        </div>
+
+        <div class="hero-focus-box">
+          <div id="hero-rec-tag" class="hero-rec-tag">Быстрый вход без воды</div>
+          <h1 id="hero-rec-title" class="hero-rec-title">⚡ Логическая разминка · 3 живые задачи</h1>
+          <p id="hero-rec-desc" class="hero-rec-desc">Проверь глаз на подменах понятий, обращениях и связках посылок за 60 секунд.</p>
+          <button type="button" class="btn-primary hero-cta" id="btn-hero-start">▶ Начать разминку · 1 мин</button>
+        </div>
+
+        <div class="hero-unlock-row">
+          <span id="hero-unlock-hint" class="hero-unlock-hint">Новые разделы открываются мягко по шагам</span>
+          <button type="button" class="btn-unlock-inline" id="btn-hero-unlock-toggle">🔓 Открыть всю карту</button>
+        </div>
+      </div>
+
+      <!-- Collapsed Progressive Drawer: Full 26-Week Curriculum + 5 Harvard Cases -->
+      <details id="curriculum-drawer" class="drawer-card">
+        <summary class="drawer-summary">
+          <span>🗺 Полная карта курса · 26 недель и 5 кейсов</span>
+          <span id="curriculum-drawer-badge" class="drawer-badge">0 / 145</span>
+        </summary>
+        <div class="drawer-body">
+          <div class="chip-scroll-wrap" style="margin-top:4px;">
+            <div id="part-chips" class="chip-scroll-row"></div>
+          </div>
+          <div id="part-intro-card" class="card intro-card"></div>
+          <div id="weeks-list" class="card-stack"></div>
+          <div id="harvard-case-slot" style="margin-top:12px;"></div>
+        </div>
+      </details>
+    </section>
+
+    <!-- WEEK READER (FOCUS ATOM ACCORDION + SEMANTIC TOPOLOGY + CHELPANOV QUESTIONS) -->
+    <section id="view-week-detail" class="view hidden">
+      <div class="nav-row">
+        <button id="btn-week-back" class="link-btn" type="button">← К карте</button>
+        <button class="link-btn btn-go-home" type="button">⌂ Сейчас</button>
+      </div>
+      <div id="week-detail-body"></div>
+    </section>
+
+    <!-- ==================== TAB 2: EXPRESS SPEED RUN (365+ POOL) ==================== -->
+    <section id="view-express" class="view hidden">
+      <div class="card blueprint-hero">
+        <span class="eyebrow">Тренажёр быстрой интуиции</span>
+        <h1 class="page-title" style="margin-top:2px;">Экспресс · 365+ задач</h1>
+        <p class="page-sub" style="margin-bottom:12px;">145 структурных задач по главам Челпанова + 220+ процедурных генераторов с замером точности и скорости хода.</p>
+        <div class="express-modes">
+          <button type="button" class="btn-primary" id="btn-start-speedrun">⚡ Быстрый микс · 5 задач</button>
+          <div class="two-col">
+            <button type="button" class="btn-secondary" id="btn-start-procedural">⚙ Генератор (7)</button>
+            <button type="button" class="btn-secondary" id="btn-start-review">↻ Слабые узлы</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="express-stats-bar" class="stats-grid" style="margin-top:12px;"></div>
+
+      <div class="field-label" style="margin-top:16px;">Тренировка по частям курса</div>
+      <div id="express-part-list" class="card-stack"></div>
+    </section>
+
+    <!-- SPEED RUN LIVE QUIZ VIEW -->
+    <section id="view-quiz-run" class="view hidden">
+      <div class="nav-row">
+        <button id="btn-quiz-abort" class="link-btn" type="button">← Выйти</button>
+        <span id="quiz-progress-label" class="muted-small"></span>
+        <span id="quiz-live-timer" class="timer-chip">0.0 с</span>
+      </div>
+      <div class="progress-track" style="margin-top:0;margin-bottom:12px;"><div id="quiz-progress-fill" class="progress-fill"></div></div>
+      <div id="quiz-question-card" class="card"></div>
+      <div class="sound-diag-row">
+        <button id="btn-quiz-sound-help" type="button" class="sound-help-link">🔇 Нет звука отклика?</button>
+        <div id="quiz-sound-tip" class="sound-tip-box hidden"></div>
+      </div>
+    </section>
+
+    <!-- SPEED RUN RESULTS -->
+    <section id="view-quiz-summary" class="view hidden">
+      <div id="quiz-summary-card" class="card blueprint-hero"></div>
+      <div class="card tribute-card" style="margin-top:12px;">
+        <div class="tribute-row">
+          <div>
+            <strong>💛 Поддержать проект</strong>
+            <p class="muted-small" style="margin-top:3px;">100% открыто, бесплатно и без рекламы. Если тренажёр добавляет ясности — можно поддержать через Tribute.</p>
+          </div>
+          <button id="btn-tribute-done" type="button" class="btn-tribute">Tribute →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: LABORATORY (7 PRECISION INSTRUMENTS) ==================== -->
+    <section id="view-lab" class="view hidden">
+      <div class="head-flex-row">
+        <div>
+          <h1 class="page-title">Лаборатория приборов</h1>
+          <p class="page-sub">Круги Эйлера, Квадрат, Молекулы вывода, Милль и 7 оптик приоритетов.</p>
+        </div>
+        <button type="button" class="btn-unlock-inline" id="btn-lab-unlock-toggle">🔓 Все 7</button>
+      </div>
+      <div class="chip-scroll-wrap">
+        <div id="lab-instrument-tabs" class="chip-scroll-row"></div>
+      </div>
+      <div class="card" id="lab-stage-card">
+        <h2 id="lab-inst-title" class="card-title" style="font-size:17px;"></h2>
+        <p id="lab-inst-sub" class="card-desc" style="margin-bottom:12px;"></p>
+        <div id="lab-inst-mount"></div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: STRATEGIES (NASH · AXELROD 1980 · DIABLO DUNGEON) ==================== -->
+    <section id="view-strategies" class="view hidden">
+      <div class="head-flex-row">
+        <div>
+          <h1 class="page-title">Полигон стратегий</h1>
+          <p class="page-sub">Матрицы и дизайн правил Нэша, детектор Аксельрода и подземелье в тумане войны.</p>
+        </div>
+        <button type="button" class="btn-unlock-inline" id="btn-strat-unlock-toggle">🔓 Все 3</button>
+      </div>
+
+      <div class="subtabs-3" role="tablist">
+        <button type="button" class="subtab active" data-sview="nash">Нэш 2×2</button>
+        <button type="button" class="subtab" data-sview="axelrod">Аксельрод</button>
+        <button type="button" class="subtab" data-sview="micromouse">Подземелье ★</button>
+      </div>
+
+      <div id="strategy-stage"></div>
+    </section>
+
+    <!-- ==================== INTERACTIVE 4-STEP [БАЗА] ONBOARDING VIEW ==================== -->
+    <section id="view-onboarding" class="view hidden">
+      <div class="nav-row">
+        <button id="btn-onboarding-back" class="link-btn" type="button">← На главную</button>
+        <span id="onboarding-progress-text" class="muted-small">Шаг 1 из 4</span>
+      </div>
+      <div id="onboarding-body"></div>
+    </section>
+
+    <!-- ==================== MY RHYTHM (HUD, SVG TREND, EBBINGHAUS & SETTINGS) ==================== -->
+    <section id="view-rhythm" class="view hidden">
+      <div class="nav-row">
+        <button id="btn-rhythm-back" class="link-btn" type="button">← Назад</button>
+        <button class="link-btn btn-go-home" type="button">⌂ Сейчас</button>
+      </div>
+      <h1 class="page-title">Мой ритм и карта</h1>
+      <p id="rhythm-meta" class="page-sub"></p>
+
+      <div id="rhythm-stats" class="stats-grid" style="margin-top:12px;"></div>
+
+      <!-- SVG Trend Chart: Accuracy (%) & Speed (s) -->
+      <div id="rhythm-trend-card" class="card hidden" style="margin-top:12px;">
+        <div class="card-meta-row" style="margin-bottom:8px;">
+          <strong style="color:var(--text);font-size:13px;">Динамика точности и скорости (Speed Run)</strong>
+          <span><span style="color:var(--accent);">● точность</span> · <span style="color:var(--sky);">● сек/ход</span></span>
+        </div>
+        <div id="rhythm-trend-svg"></div>
+      </div>
+
+      <!-- Due / Weak Atoms Action Card -->
+      <div id="rhythm-due-card" class="card hidden" style="margin-top:12px;"></div>
+
+      <div class="field-label" style="margin-top:16px;">Прогресс по 5 частям курса (145 атомов)</div>
+      <div id="rhythm-parts" class="card-stack"></div>
+
+      <div class="field-label" style="margin-top:16px;">Последние прогоны Speed Run</div>
+      <div id="rhythm-runs" class="card-stack"></div>
+
+      <div class="field-label" style="margin-top:16px;">Мои разборы Гарвардских кейсов</div>
+      <div id="rhythm-notes" class="card-stack"></div>
+
+      <div class="field-label" style="margin-top:16px;">Настройки и управление данными</div>
+      <div class="card settings-card">
+        <div class="setting-row">
+          <div>
+            <div class="setting-title">🔊 Тактильный микро-звук</div>
+            <div class="setting-sub">Геометрический отклик с обходом беззвучного режима iPhone</div>
+          </div>
+          <button id="pref-sound-btn" type="button" class="toggle-pill on">Вкл</button>
+        </div>
+        <div class="setting-row">
+          <div>
+            <div class="setting-title">🧭 Режим открытия карты</div>
+            <div id="pref-sandbox-sub" class="setting-sub">По шагам — новые приборы открываются мягко</div>
+          </div>
+          <button id="pref-sandbox-btn" type="button" class="toggle-pill">По шагам</button>
+        </div>
+        <div class="two-col" style="padding-top:6px;border-top:1px solid var(--border);">
+          <button id="btn-export-json" type="button" class="btn-secondary">⬇ Экспорт JSON</button>
+          <button id="btn-reset-all" type="button" class="btn-secondary danger-btn">↺ Сбросить всё</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subtle Support Footer -->
+    <footer id="app-support-footer" class="support-footer">
+      <span>❖ Геометрия мышления · локальное хранение</span>
+      <button id="btn-tribute-footer" type="button" class="footer-link">💛 Поддержать в Tribute ›</button>
+    </footer>
+  </main>
+
+  <!-- DUAL-MODE PROGRESSIVE UNLOCK / MILESTONE BOTTOM SHEET -->
+  <div id="unlock-modal" class="unlock-modal hidden" role="dialog" aria-modal="true" aria-labelledby="unlock-modal-title">
+    <div id="unlock-modal-backdrop" class="unlock-backdrop"></div>
+    <div class="unlock-sheet">
+      <div id="unlock-modal-kicker" class="eyebrow">Спокойный вход в сложное</div>
+      <h2 id="unlock-modal-title" class="unlock-title">Откроется на следующей ступени</h2>
+      <p id="unlock-modal-body" class="unlock-body"></p>
+
+      <div id="unlock-tribute-box" class="unlock-tribute-box hidden">
+        <strong style="font-size:13.5px;color:#fae6c3;">💛 Если стало яснее мыслить</strong>
+        <p class="muted-small" style="margin:4px 0 10px;color:var(--text-soft);">Проект открыт бесплатно и без рекламы. Можно поддержать его развитие любой суммой в Tribute.</p>
+        <button id="btn-unlock-tribute" type="button" class="btn-tribute" style="width:100%;">Поблагодарить в Tribute →</button>
+      </div>
+
+      <div class="unlock-actions">
+        <button id="btn-unlock-primary" type="button" class="btn-primary">⚡ Пройти быструю разминку (1 мин)</button>
+        <button id="btn-unlock-all" type="button" class="btn-secondary">🔓 Открыть всю карту сразу (145 атомов и 7 приборов)</button>
+        <button id="btn-unlock-close" type="button" class="link-btn" style="text-align:center;padding:6px;">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <noscript><div><img src="https://mc.yandex.ru/watch/114629390" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <script src="./analytics.js?v=410"></script>
+  <script src="./audio-cue.js?v=410"></script>
+  <script src="./storage.js?v=410"></script>
+  <script src="./games_engine.js?v=410"></script>
+  <script src="./onboarding_and_guides.js?v=410"></script>
+  <script src="./strategy_lab.js?v=410"></script>
+  <script src="./priority_lab.js?v=410"></script>
+  <script src="./schemas.js?v=410"></script>
+  <script src="./app.js?v=410"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Геометрия мышления · Логика и Стратегии",
+  "short_name": "Логика",
+  "description": "145 атомов логики Челпанова, 365+ задач Speed Run, 7 интерактивных приборов и 3 арены стратегий. Работает без сервера.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0e13",
+  "theme_color": "#0b0e13",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "./icon.svg?v=400",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

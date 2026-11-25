@@ -1,0 +1,87 @@
+{
+  "app_name": "Геометрия мышления",
+  "schema_version": "thinking-geometry-catalog/3.0",
+  "analytics_enabled": true,
+  "metrika_id": 114629390,
+  "parts": 5,
+  "weeks": 26,
+  "atoms": 145,
+  "topology_edges": 401,
+  "author_questions": 204,
+  "static_quiz": 145,
+  "procedural_games": 4,
+  "external_urls": [
+    "http://www.w3.org/2000/svg",
+    "https://mc.yandex.com",
+    "https://mc.yandex.ru",
+    "https://mc.yandex.ru/metrika/tag.js?id=114629390",
+    "https://mc.yandex.ru/watch/114629390",
+    "https://t.me/tribute/app?startapp=dUHt",
+    "https://telegram.org",
+    "https://telegram.org/js/telegram-web-app.js",
+    "https://web.tribute.tg/d/UHt",
+    "https://yastatic.net"
+  ],
+  "files": {
+    ".nojekyll": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "analytics.js": {
+      "bytes": 6957,
+      "sha256": "7fb0414a5554d7fb7bbabf85d035ff42454f75f1fa0db4bccd77ef1393fa8e0c"
+    },
+    "app.js": {
+      "bytes": 116808,
+      "sha256": "913512c34b2cc3d4bdd6969b7dc199458b84a0b715207e48a6fa01bf07f1e1e1"
+    },
+    "audio-cue.js": {
+      "bytes": 7711,
+      "sha256": "aa0a2d99285f46790a2a6851ccf11a6f5efe88c6d238ae8284ad241a21b2244b"
+    },
+    "catalog.json": {
+      "bytes": 717092,
+      "sha256": "4d6082e5afa92c2af7df47b03ceaa5173887516802e7f67fa1bcfa5268411ba0"
+    },
+    "games_engine.js": {
+      "bytes": 24270,
+      "sha256": "c567a95fe9e9b42116de90dc3ed7164d9efa69716d74ca3c5662e6619ece8f53"
+    },
+    "icon.svg": {
+      "bytes": 1109,
+      "sha256": "513384093f206357ad105599def113108f679928813716074afdb1375af7f972"
+    },
+    "index.html": {
+      "bytes": 17670,
+      "sha256": "b5647c35597578dd7bcb548b8500b591a5ee55a61b092a84ed7ca9ab42d59341"
+    },
+    "manifest.webmanifest": {
+      "bytes": 670,
+      "sha256": "5c08b67310d5e2a8d608246128493a53b013550f75838c5541467245da0f5b1a"
+    },
+    "onboarding_and_guides.js": {
+      "bytes": 34760,
+      "sha256": "eecd04573b237315da97cc687ed9de207938f75ab7349d9dc5db7d2ebe520baf"
+    },
+    "priority_lab.js": {
+      "bytes": 43859,
+      "sha256": "ba769b12da17cc2923bdaaaf37d2b9b6b7cbfdbbc758510ad742b0e0e394954f"
+    },
+    "schemas.js": {
+      "bytes": 78941,
+      "sha256": "e1316019d65b1feb2be8b423a9f74023bc6d7a0cd5e68d9a2ad9d14312082866"
+    },
+    "storage.js": {
+      "bytes": 23142,
+      "sha256": "6ea9e6eed258fef81e788a6ae5db5eb1e1847b22f7d3cfac08a7e50e1671072d"
+    },
+    "strategy_lab.js": {
+      "bytes": 28664,
+      "sha256": "e8db51335c6e1980c2c469c4e8b43cf979838bd4b91625666371ddcc699977ad"
+    },
+    "style.css": {
+      "bytes": 34451,
+      "sha256": "ce7b824f7e5f2d2aa5da42f8f01e52d1e9bf81c74fb76e7948f963de74f8db7d"
+    }
+  }
+}
